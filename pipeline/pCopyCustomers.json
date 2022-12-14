@@ -1,0 +1,35 @@
+{
+	"name": "pCopyCustomers",
+	"properties": {
+		"activities": [
+			{
+				"name": "dfCopyCustomers",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "dfCopyCustomers",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"concurrency": 1,
+		"annotations": [],
+		"lastPublishTime": "2022-12-09T10:32:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
